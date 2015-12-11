@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dogfood Center</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.4 -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
+    <link href="/app/css/dogfood.css" rel="stylesheet" type="text/css" />
+   
+    <link rel="icon"  href="/favicon.ico">
+    <link rel="apple-touch-icon" href="app/images/touch/apple-touch-icon.png">
+
+   
+  </head>
+  
+  <body class="layout-top-nav">
+    <div class="wrapper" id="div-wrapper">
+    
+
+    </div><!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/app/js/page.js" type="text/javascript"></script>
+    <script src="/app/js/dogfood.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    function installIpa(plistpath, isMM) {
+        down_head = "itms-services://?action=download-manifest&url=https://YOUR_DOUMAIN"
+        $(".item").unbind('click');
+        if(!isMM) {
+            alert("请在iOS系统上使用safari浏览器进行安装")
+        } else if(isMM) {
+            console.log(down_head + plistpath);
+            window.location.href = down_head + plistpath;
+        } else {
+
+        }
+    }
+
+    function installApk(down_path, isMM) {
+        if(isMM) {
+            alert('请点击"微信"右上角按钮，然后在弹出的菜单中，点击"在浏览器中打开"，即可安装');
+        } else {
+            window.location.href = down_path;
+        }
+    }
+
+    </script>
+
+
+  </body>
+</html>
