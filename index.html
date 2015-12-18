@@ -32,19 +32,6 @@
     <script src="/app/js/dogfood.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-    function installIpa(plistpath, isMM) {
-        down_head = "itms-services://?action=download-manifest&url=https://YOUR_DOUMAIN"
-        $(".item").unbind('click');
-        if(!isMM) {
-            alert("请在iOS系统上使用safari浏览器进行安装")
-        } else if(isMM) {
-            console.log(down_head + plistpath);
-            window.location.href = down_head + plistpath;
-        } else {
-
-        }
-    }
-
     function installApk(down_path, isMM) {
         if(isMM) {
             alert('请点击"微信"右上角按钮，然后在弹出的菜单中，点击"在浏览器中打开"，即可安装');
